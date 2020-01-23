@@ -1,0 +1,82 @@
+<html>
+<head>
+	<title>formulaire MEDICAMENT</title>
+    <meta charset="utf-8">
+	<style type="text/css">
+		body{
+            background-color: white;
+        } 
+        label.titre{ 
+            width: 180; 
+            clear: left;
+            float: left; 
+        } 
+        .zone{
+            width: 40car; 
+            float: left;
+            color: #7091BB; 
+        }
+        .haut{ /*Gestion des visites*/
+            margin: 2 2 2 2;
+            height: 6%;
+            background-color: white;
+        }
+        .haut.h1{
+            top:50;
+            left: 50;
+        }
+        .gauche{
+            float:left;
+            width:18%;
+            background-color:white;
+            height:100%;
+        }
+        .droite{
+            float:left;
+            margin : 10 2 2 2;
+            width:80%;
+        }
+        .bas{
+            clear:left;
+            background-color:#77AADD;
+            color:white;
+            height:88%;
+        }
+	</style>
+</head>
+<body>
+<div class="haut"><img src="src/logo.jpg" width="100" height="60"/><h1>Gestion des visites</h1></div>
+<div class="gauche">
+	<h2>Outils</h2>
+	<ul><li>Comptes-Rendus</li>
+		<ul>
+			<li><a href="formRAPPORT_VISITE.htm" >Nouveaux</a></li>
+			<li>Consulter</li>
+		</ul>
+		<li>Consulter</li>
+		<ul><li><a href="formMEDICAMENT.htm" >Médicaments</a></li>
+			<li><a href="formPRATICIEN.htm" >Praticiens</a></li>
+			<li><a href="formVISITEUR.htm" >Autres visiteurs</a></li>
+		</ul>
+	</ul>
+</div>
+<div class="droite">
+	<div class="bas">
+	<form name="formMEDICAMENT" method="post" action="recupMEDICAMENT.php">
+		<h1> Pharmacopee </h1>
+		<label class="titre">DEPOT LEGAL :</label><input type="text" size="10" name="MED_DEPOTLEGAL" class="zone" />
+		<label class="titre">NOM COMMERCIAL :</label><input type="text" size="25" name="MED_NOMCOMMERCIAL" class="zone" />
+		<label class="titre">FAMILLE :</label><input type="text" size="3" name="FAM_CODE" class="zone" />
+		<label class="titre">COMPOSITION :</label><textarea rows="5" cols="50" name="MED_COMPOSITION" class="zone" ></textarea>
+		<label class="titre">EFFETS :</label><textarea rows="5" cols="50" name="MED_EFFETS" class="zone" ></textarea>
+		<label class="titre">CONTRE INDIC. :</label><textarea rows="5" cols="50" name="MED_CONTREINDIC" class="zone" ></textarea>
+		<label class="titre">PRIX ECHANTILLON :</label>
+        <input type="text" size="7" name="MED_PRIXECHANTILLON" class="zone"/>
+		<label class="titre">&nbsp;</label>
+        <input class="zone" type="button" value="<"></input>
+        <input class="zone" type="button" value=">"></input>
+	</form>
+	</div>
+</div>
+</body>
+</html>
